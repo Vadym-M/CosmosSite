@@ -1,0 +1,95 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.fa-arrow-down {
+  font-size: 3rem;
+  color: white;
+}
+
+#scroll-down {
+  border-radius: 50%;
+  background: linear-gradient(133.58deg, #606060 21.42%, #B8DF4E 84.72%), #FFFFFF;
+  width: 100px;
+  height: 100px;
+  margin: 25% auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: unset;
+}
+
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav button {
+  width: 50%;
+  height: 50px;
+}
+
+.container {
+  display: flex;
+}
+
+section {
+  height: 100vh;
+}
+
+#section_1 {
+  background: url("background.jpg") no-repeat;
+  background-size: cover;
+}
+
+.first-half, .second-half {
+  width: 50%;
+}
+
+#zad20 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lotto_numbers_container {
+  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#lotto_numbers_container > div:nth-child(even) {
+  background: #ccc;
+}
+#lotto_numbers_container > div {
+  padding: 5px;
+}
+#lotto_numbers_container .selected {
+  background: yellow !important;
+}
+#lotto_numbers_container .match {
+  background: red !important;
+}
+
+#zad20, #zad9, #zad24, #zad23 {
+  text-align: center;
+  background: white;
+  margin: 6%;
+  padding: 5%;
+}
+
+#zad23 {
+  border-radius: 50%;
+  width: fit-content;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
