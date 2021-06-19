@@ -1,1 +1,1 @@
-#DOKUMENTACJA: Kolejne sekcje strony dodajemy w tagu <section>
+#DOKUMENTACJA: Kolejne sekcje strony dodajemy w tagu section
