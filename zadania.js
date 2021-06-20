@@ -140,3 +140,103 @@ clockEl.innerHTML = new Date().toLocaleTimeString();
 setInterval(() => {
     clockEl.innerHTML = new Date().toLocaleTimeString();
 }, 1000)
+
+
+//next page
+//zad 17
+const inpt_zad17 = document.getElementById('input_zad17')
+const ts = document.querySelector('#tasks')
+const wrapper_zad17 = document.getElementById('wrapper_zad17')
+
+//create task
+button2.onclick = function() {
+    console.log(ts.value)
+    
+    let str = null;
+    switch(ts.value){
+        case '1':
+            console.log('ok')
+            str = firstThree(inpt_zad17.value)
+            break;
+            case '2':
+                str = secondsCharFromEnd(inpt_zad17.value)
+                break
+                case '3':
+                    str = inpt_zad17.value.slice(-4) //wyświetlenie ostatnich 4 znaków
+                    break
+                    case '4':
+                        str = inpt_zad17.value.toLowerCase() //wyświetlenie tekstu złożonego jedynie z małych liter
+                        break
+                        case '5':
+                            str = inpt_zad17.value.toUpperCase()//wyświetlenie tekstu złożonego jedynie z dużych liter
+                            break
+                            case '6':
+                                str = mixCase(inpt_zad17.value)
+                                break
+                                case '7':
+                                    str = removeSpace(inpt_zad17.value)
+                                    break
+                                    case '8':
+                                        str = inpt_zad17.value.replace( /[aeiou]/g, '' )
+                                        break
+                                        case '9':
+                                            str = reverseString(inpt_zad17.value)
+                                            break
+    }
+    console.log(str)
+    let txt = document.createElement('p')
+    txt.id= ts.value
+    txt.innerHTML = str + '<button id="del" >X</button>'
+    txt.style = 'margin-left: 20px'
+    wrapper_zad17.insertAdjacentElement('beforeEnd', txt)
+  };
+//delete task
+  wrapper_zad17.onclick = function(event){
+      let target = event.target
+      //console.log(target.id)
+      if(target.id == 'del'){
+      target.parentNode.remove()
+    }
+  }
+//wyświetlenie trzech pierwszych znaków
+function firstThree(str){
+    return str.substring(0,3)
+}
+
+//wyświetlenie drugiego znaku od końca
+function secondsCharFromEnd(str){
+return str.charAt(str.length-2)
+}
+
+//wyświetlenie tekstu złożonego małych i dużych liter pisanych naprzemiennie
+function mixCase(str){
+    let new_str = ''
+    for(var i = 0; i < str.length; i++){
+        if(i%2 == 0){
+        new_str+= str.charAt(i).toLowerCase()
+        }else{
+            new_str+= str.charAt(i).toUpperCase()
+        }
+    }
+    return new_str
+}
+
+//wyświetlenie tekstu pozbawionego spacji
+function removeSpace(str){
+let new_str = ''
+for( var i = 0; i<str.length; i++){
+    console.log(str)
+    str = str.replace(' ', '')
+}
+return str
+}
+
+//wyświetlenie odwróconego tekstu
+function reverseString(str){
+    var splitString = str.split("");
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join(""); 
+    return joinArray; 
+}
+
+

@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  background: black;
+  background: white;
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -93,3 +93,46 @@ section {
 }
 
 /*# sourceMappingURL=style.css.map */
+/*next page*/
+#section_2{
+  margin-top: 30px;
+}
+hr {
+  border: none; 
+  background-color: rgb(0, 0, 0); 
+  height: 2px; 
+ }
+
+ .main_container{background-color: #21291A;
+  display: flex;
+  min-height: 100%;
+}
+.left_container{background-color: #1e2625;
+  width: 50%;
+}
+.right_container{background-color: #1e2625;
+  width: 50%;
+}
+.wrapper_zad17{
+  display: block;
+  background-color: #828c84;
+  width: 80%;
+  height: 350px;
+  margin: 30px;
+}
+.input_zad17{
+
+  margin: 20px 0 0 20px;
+  width: 80%;
+  
+}
+.select_zad17{
+  
+}
+button{
+  margin: 0 0 0 20px;
+}
+select{
+  margin: 20px 0 0 20px;
+  width: 80%;
+}
