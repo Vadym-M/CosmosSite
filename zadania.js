@@ -356,6 +356,37 @@ let height = h
   field.innerHTML = F;
 }
 
+//zad4
+var mouse_x = mouse_y = 0
+var run = false
+function init() {
+    if (document.layers) document.captureEvents(Event.MOUSEMOVE)
+    document.onmousemove = mousemove
+}
+function mousemove(event) {
+    if(run){
+    
+    
+    if (document.attachEvent != null) {
+        mouse_x = window.event.clientX
+        mouse_y = window.event.clientY
+    } else if (!document.attachEvent && document.addEventListener) {
+        mouse_x = event.clientX
+        mouse_y = event.clientY
+    }
+    status = "x = " + mouse_x + ", y = " + mouse_y;
+    document.getElementById('result_zad4').innerHTML = 'Result: '+  "x = " + mouse_x + ", y = " + mouse_y
+}
+    
+}
+init()
+btn_start_zad4.onclick = function(){
+    run=true
+}
+btn_stop_zad4.onclick = function(){
+    document.getElementById('result_zad4').innerHTML = 'Result: '+ 'x = ?' + ', y = ?'
+    run = false
+}
 
     
 
