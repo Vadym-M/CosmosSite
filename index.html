@@ -41,7 +41,7 @@
             <div class="wrapper_zad17" id="wrapper_zad17">
                 <div>
                     <input class="input_zad17" type="text" size="40" id="input_zad17">
-                     <button id="button2" >RUN</button>
+                    <button id="button2">RUN</button>
                 </div>
                 <div class="select_zad17">
                     <select id="tasks">
@@ -50,19 +50,41 @@
                         <option value="3">Wyświetlenie ostatnich 4 znaków</option>
                         <option value="4">Wyświetlenie tekstu złożonego jedynie z małych liter</option>
                         <option value="5">Wyświetlenie tekstu złożonego jedynie z dużych liter</option>
-                        <option value="6">Wyświetlenie tekstu złożonego małych i dużych liter pisanych naprzemiennie</option>
+                        <option value="6">Wyświetlenie tekstu złożonego małych i dużych liter pisanych naprzemiennie
+                        </option>
                         <option value="7">Wyświetlenie tekstu pozbawionego spacji</option>
                         <option value="8">Wyświetlenie tekstu pozbawionego wszystkich samogłosek</option>
                         <option value="9">Wyświetlenie odwróconego tekstu</option>
-                      </select>
+                    </select>
                 </div>
-            
-                
+
+
             </div>
-            
+
         </div>
-       
-        <div class="right_container">test2</div>
+
+        <div class="right_container">
+            <div id="wrapper_zad19">
+                <div>
+                    <input type="text" style="margin-left: 20px;" id="input_zad19">
+                    <button id="btn_zad19">ADD</button>
+                    <select name="" id="select_zad19">
+
+                    </select>
+                    <button id="btn_delete">DELETE</button>
+                </div>
+                
+                <span id="lng_count">Count:</span>
+                <input type="radio" id="sortAz" name="sort" value="male" onclick="sortAz()">
+                <label for="male">A-z</label>
+                <input type="radio" id="sortZa" name="sort" value="female" onclick="sortZa()">
+                <label for="female">Z-a</label>
+            
+                <div id="wrapper_lngs">
+
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

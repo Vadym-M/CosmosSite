@@ -239,4 +239,83 @@ function reverseString(str){
     return joinArray; 
 }
 
+//zad 19
+const lngs = new Array()
+
+lngs.push('Java')
+lngs.push('C#')
+let wrapper_lngs = document.getElementById('wrapper_lngs')
+
+function createLng(lng){
+    let circle = document.createElement('div')
+    circle.id = lng
+    circle.style = 'padding: 15px; margin: 5px; width: min-content; border-radius: 50%; background-color: white'
+    circle.innerHTML = '<span>'+lng+'</span>'
+    wrapper_lngs.insertAdjacentElement('beforeEnd', circle)
+}
+
+lngs.map(function(x){
+    createLng(x)
+})
+
+
+const inpt_zad19 = document.getElementById('input_zad19')
+const select_zad19 = document.getElementById('select_zad19')
+const lng_count = document.getElementById('lng_count')
+
+function fillSelect(lng){
+    if(lng){
+        var opt = document.createElement("option");
+        opt.id = lng+'_opt'
+        opt.innerHTML = lng;
+        select_zad19.appendChild(opt);
+    }else{
+        lngs.map(function(x){
+            var opt = document.createElement("option");
+            opt.id = x+'_opt'
+            opt.innerHTML = x;
+            select_zad19.appendChild(opt);
+        })
+    }
+    lng_count.innerHTML = 'Count: '+lngs.length
+
+}
+fillSelect()
+
+btn_zad19.onclick = function(){
+    if(lngs.indexOf(inpt_zad19.value) == -1){
+    if(inpt_zad19.value){
+    createLng(inpt_zad19.value)
+    lngs.push(inpt_zad19.value)
+    fillSelect(inpt_zad19.value)
+    }
+}
+}
+
+btn_delete.onclick = function(){
+var z = select_zad19.value
+document.getElementById(select_zad19.value).remove()
+document.getElementById(select_zad19.value+'_opt').remove()
+let del = lngs.indexOf(z)
+lngs.splice(del, 1)
+lng_count.innerHTML = 'Count: '+lngs.length
+console.log(lngs)
+}
+
+function sortAz(){
+    lngs.map(function(x){document.getElementById(x).remove()})
+    lngs.sort()
+    lngs.map(function(x){
+        createLng(x)
+    })
+}
+function sortZa(){
+    lngs.map(function(x){document.getElementById(x).remove()})
+    lngs.sort()
+    lngs.reverse()
+    lngs.map(function(x){
+        createLng(x)
+    })
+}
+
 
