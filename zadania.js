@@ -318,4 +318,45 @@ function sortZa(){
     })
 }
 
+//zad 22
+let field = document.getElementById('field_for_square')
+const inpt_width = document.getElementById('inpt_width')
+const inpt_height = document.getElementById('inpt_height')
+
+btn_zad22.onclick = function(){
+    draw(inpt_width.value, inpt_height.value)
+}
+
+function draw (w, h)
+{
+let width = w
+let height = h
+  let S = "";
+  let T = ''
+  let F = "";
+  for (let j = 0; j <width; j ++)
+  {
+    S += '*';
+  }
+  for(let y = 0; y <width; y++ ){
+      if(y == 0|| y == width-1){
+      T += '*'
+      }else{
+          T+= '  '
+      }
+  }
+  for (let i = 0; i <height; i ++)
+  {
+      if(i == 0 || i == height-1 ){
+    F += "<div>" + S + "</div>";
+}else{
+    F+= "<div>" + T + "</div>"
+}
+  }
+  field.innerHTML = F;
+}
+
+
+    
+
 

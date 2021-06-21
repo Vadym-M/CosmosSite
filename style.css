@@ -166,3 +166,16 @@ button{
   margin-left: 20px;
   margin-right: 40px;
 }
+#wrapper_zad22{
+
+ text-align: center;
+  background-color: violet;
+}
+.fields_zad22{
+  margin: 15px;
+}
+#s_wrapper_zad22{
+  display: inline-flex;
+  margin-right: 50px;
+  width: 100px; 
+}
