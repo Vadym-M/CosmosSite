@@ -103,22 +103,23 @@ hr {
   height: 2px; 
  }
 
- .main_container{background-color: #21291A;
+ .main_container{background-image: url('bg_section2.jpg');
   display: flex;
   min-height: 100%;
 }
-.left_container{background-color: #1e2625;
+.left_container{
   width: 50%;
 }
-.right_container{background-color: #1e2625;
+.right_container{
   width: 50%;
 }
 .wrapper_zad17{
   display: block;
-  background-color: #828c84;
+  background-color: #30364A;
   width: 80%;
-  height: 350px;
+  height: 40%;
   margin: 30px;
+  padding: 10px;
 }
 .input_zad17{
 
@@ -126,7 +127,43 @@ hr {
   width: 80%;
   
 }
-.select_zad17{
+.container_input_zad17{
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+.container_input_zad17 input#input_zad17, #input_zad19{
+  width: 300px;
+  height: 25px;
+  background: #d9e8f7;
+  
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  outline:none;
+  padding-left: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#inpt_height, #inpt_width{
+  width: 150px;
+  height: 25px;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  outline:none;
+  padding-left: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.container_input_zad17 input#input_zad17:hover, #input_zad19:hover{
+  outline:none;
+  background: #ffffff;
   
 }
 button{
@@ -138,10 +175,10 @@ button{
 }
 
 #wrapper_zad19{
-  height: 450px;
+  height: 60%;
   margin-top: 20px;
   margin-right: 20px;
-  background-color: thistle;
+  background-color: #757B92;
 }
 #wrapper_lngs{
   margin-left: 15px;
@@ -169,7 +206,7 @@ button{
 #wrapper_zad22{
 
  text-align: center;
-  background-color: violet;
+  background-color: #d2a283;
 }
 .fields_zad22{
   margin: 15px;
@@ -179,3 +216,31 @@ button{
   margin-right: 350px;
   width: 100px; 
 }
+#button2, #btn_zad19, #btn_delete, #btn_start_zad4, #btn_stop_zad4, #btn_zad22{
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  letter-spacing: 2px;
+  padding: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px 0 0 20px;
+}
+#button2:hover, #btn_zad19:hover, #btn_delete:hover, #btn_start_zad4:hover, #btn_stop_zad4:hover{
+  color: #d2a283;
+}
+
+select{
+  outline:none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  height: 25px;
+}
+#section2{
+  color: white;
+}
+span, label, p{
+  color: white;
+}
+

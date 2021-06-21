@@ -233,10 +233,10 @@ return str
 
 //wyświetlenie odwróconego tekstu
 function reverseString(str){
-    var splitString = str.split("");
-    var reverseArray = splitString.reverse();
-    var joinArray = reverseArray.join(""); 
-    return joinArray; 
+    var splitString = str.split("")
+    var reverseArray = splitString.reverse()
+    var joinArray = reverseArray.join("")
+    return joinArray;
 }
 
 //zad 19
@@ -249,7 +249,7 @@ let wrapper_lngs = document.getElementById('wrapper_lngs')
 function createLng(lng){
     let circle = document.createElement('div')
     circle.id = lng
-    circle.style = 'padding: 15px; margin: 5px; width: min-content; border-radius: 50%; background-color: white'
+    circle.style = 'padding: 15px; margin: 5px; width: min-content; border-radius: 50%; background-color: #30364A'
     circle.innerHTML = '<span>'+lng+'</span>'
     wrapper_lngs.insertAdjacentElement('beforeEnd', circle)
 }
@@ -265,16 +265,16 @@ const lng_count = document.getElementById('lng_count')
 
 function fillSelect(lng){
     if(lng){
-        var opt = document.createElement("option");
+        var opt = document.createElement("option")
         opt.id = lng+'_opt'
-        opt.innerHTML = lng;
-        select_zad19.appendChild(opt);
+        opt.innerHTML = lng
+        select_zad19.appendChild(opt)
     }else{
         lngs.map(function(x){
-            var opt = document.createElement("option");
+            var opt = document.createElement("option")
             opt.id = x+'_opt'
-            opt.innerHTML = x;
-            select_zad19.appendChild(opt);
+            opt.innerHTML = x
+            select_zad19.appendChild(opt)
         })
     }
     lng_count.innerHTML = 'Count: '+lngs.length
@@ -331,12 +331,12 @@ function draw (w, h)
 {
 let width = w
 let height = h
-  let S = "";
+  let S = ""
   let T = ''
-  let F = "";
+  let F = ""
   for (let j = 0; j <width; j ++)
   {
-    S += '*';
+    S += '*'
   }
   for(let y = 0; y <width; y++ ){
       if(y == 0|| y == width-1){
@@ -348,12 +348,12 @@ let height = h
   for (let i = 0; i <height; i ++)
   {
       if(i == 0 || i == height-1 ){
-    F += "<div>" + S + "</div>";
+    F += "<div>" + S + "</div>"
 }else{
     F+= "<div>" + T + "</div>"
 }
   }
-  field.innerHTML = F;
+  field.innerHTML = F
 }
 
 //zad4
