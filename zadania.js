@@ -324,10 +324,10 @@ const inpt_width = document.getElementById('inpt_width')
 const inpt_height = document.getElementById('inpt_height')
 
 btn_zad22.onclick = function(){
-    draw(inpt_width.value, inpt_height.value)
+    draw_zad22(inpt_width.value, inpt_height.value)
 }
 
-function draw (w, h)
+function draw_zad22 (w, h)
 {
 let width = w
 let height = h

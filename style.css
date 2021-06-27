@@ -166,7 +166,7 @@ hr {
   background: #ffffff;
   
 }
-button{
+#section_2 button{
   margin: 0 0 0 20px;
 }
 #tasks{
@@ -237,10 +237,15 @@ select{
   -moz-border-radius: 5px;
   height: 25px;
 }
-#section2{
+#section_2 span{
   color: white;
 }
-span, label, p{
+
+#section_2 p{
+  color: white;
+}
+
+#section_2 label{
   color: white;
 }
 
